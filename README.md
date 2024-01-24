@@ -25,5 +25,12 @@ void setup() {
   serialPrintArray.serialPrintArray(charArray, charArrayLength);
 }
 
-void loop() {}
+/*
+  Expected output:
+  1, 2, 3, 4, 5
+  1 | 2 | 3 | 4 | 5
+  Array of integers with custom delimiter: 1 | 2 | 3 | 4 | 5
+  1.1, 1.2, 3.14, 66.6, 4.20
+  One, Two, Three, Four
+*/
 ```
