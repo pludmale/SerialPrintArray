@@ -3,10 +3,17 @@
   Created by Katrina Kizenbaha, 24th January, 2024.
 */
 
-#include "Arduino.h"
-#include "SerialPrintArray.h"
+#ifndef SerialPrintArray_h
+#define SerialPrintArray_h
 
-SerialPrintArray::SerialPrintArray() {}
+#include "Arduino.h"
+
+class SerialPrintArray
+{
+  public:
+    template <typename T>
+    void serialPrintArray(const T* array, size_t length, const char* delimiter = ", ", const char* label = "");
+};
 
 template <typename T>
 void SerialPrintArray::serialPrintArray(const T* array, size_t length, const char* delimiter, const char* label) {
@@ -24,3 +31,5 @@ void SerialPrintArray::serialPrintArray(const T* array, size_t length, const cha
 
     Serial.println();
 }
+
+#endif
